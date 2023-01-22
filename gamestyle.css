@@ -1,0 +1,213 @@
+body {
+    background-color: burlywood;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+#game-body {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border: 3px solid rgb(75, 75, 75);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.columns {
+    width: 100px;
+    height: 100px;
+    background-color: khaki;
+    border: 1px solid rgb(75, 75, 75);
+    font-size: 100px;
+    font-family: "Comic Sans", "Comic Sans MS", sans-serif, Helvetica;
+    cursor: pointer;
+    text-align: center;
+    line-height: 0px;
+}
+
+.player {
+    display: flex;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    background-color:#b4925e;
+    border-radius: 10px;
+    height: 100px;
+}
+#player-X, #player-O {
+    flex: 1;
+    position: fixed;
+    display: grid;
+    row-gap: 10px;
+    font: bold 16px Roboto, arial;
+    padding: 5px;
+    border-radius: 5px;
+}
+#player-O {
+    background-color: lightseagreen;
+    top: 15px;
+    right: 10px;
+    bottom: 15px;
+    width: 170px;
+}
+
+#player-X {
+    background-color: lightcoral;
+    top: 15px;
+    left: 10px;
+    bottom: 15px;
+    width: 170px;
+}
+
+#player1Score, #player2Score {
+    padding: 0 0 0 4px;
+}
+
+.player-ties {
+    position: absolute;
+    background-color: khaki;
+    bottom: -3px;
+    right: 0;
+    font: bold 16px Roboto, arial;
+    border: solid 1px;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+#clearButton {
+    position: absolute;
+    background-color: burlywood;
+    cursor: pointer;
+    pointer-events: auto;
+    padding: 5px;
+    right: 15px;
+    top: 10px;
+    font: bold 16px Roboto, Arial;
+    border: solid 1px;
+    border-radius: 10px;
+}
+
+.moveIcon1 {
+    position: absolute;
+    font: 500 65px "Comic Sans", "Comic Sans MS", sans-serif, Helvetica;
+    right: 10px;
+    bottom: 0px;
+}
+
+.moveIcon2 {
+    position: absolute;
+    font: 500 65px "Comic Sans", "Comic Sans MS", sans-serif, Helvetica;
+    right: 10px;
+    bottom: 0px;
+}
+#reset-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    font: bold 14px Roboto, Arial;
+    cursor: pointer;
+}
+
+#game-result-container {
+    position: fixed;
+    display: grid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    align-content: center;
+    justify-items: center;
+    background-color: white;
+    padding: 8px;
+    border: solid 1px;
+    border-radius: 5px;
+    z-index: 3;
+    row-gap: 2px;
+}
+
+#game-result {
+    font-size: 18px;
+    font-weight: bold;
+}
+#press-info {
+    font-size: 12px;
+    color: #55d524;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+ @media (max-width: 420px) or (max-height: 500px) {
+     .player {
+         width: 300px;
+     }
+
+     .columns {
+         width: 75px;
+         height: 75px;
+         font-size: 70px;
+     }
+
+     #player-X,
+     #player-O {
+         width: 120px;
+     }
+ }
+
+ @media (max-height: 800px) {
+     .player {
+         top: 10%;
+     }
+ }
+
+ @media (max-height: 600px) {
+     .player {
+         top: 20px;
+     }
+
+     #game-body {
+         top: 60%;
+     }
+     #reset-button {
+        margin-top: 100px;
+     }
+     #clearButton {
+         top: 100px;
+     }
+ }
+
+ @media (max-width: 300px) {
+     .player {
+         width: 200px;
+         height: 80px;
+     }
+
+     #player-X,
+     #player-O {
+         width: 75px;
+         font-size: 10px;
+     }
+     .moveIcon1, .moveIcon2 {
+        font-size: 35px;
+        bottom: 5px;
+     }
+ }
+ @media (max-height: 370px){

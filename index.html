@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width=initial-scale=1.0">
+        <link rel="stylesheet" href="./gamestyle.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <script src="./gamelogic.js" defer></script>
+    </head>
+    <body>
+      
+        <div class="player">
+            <div id="player-X">
+                <div class="player-name">Player 1</div>
+                <div class="player-score">
+                    Win&sol;s&colon;<span id="player1Score">0</span>
+                </div>
+            </div>
+            <div id="player-O">
+                <div class="player-name">Player 2</div>
+                <div class="player-score">
+                    Win&sol;s&colon;<span id="player2Score">0</span>
+                </div>
+            </div>
+            <div class="player-ties">Tie&colon; <span id="tieCount">0</span></div>
+        </div>
+        <div id="game-body">
+            <div class="row">
+                <button id="top-right" class="columns"></button>
+                <button id="top-middle" class="columns"></button>
+                <button id="top-left" class="columns"></button>
+            </div>
+            <div class="row">
+                <button id="center-right" class="columns"></button>
+                <button id="center-middle" class="columns"></button>
+                <button id="center-left" class="columns"></button>
+            </div>
+            <div class="row">
+                <button id="bottom-right" class="columns"></button>
+                <button id="bottom-middle" class="columns"></button>
+                <button id="bottom-left" class="columns"></button>
+            </div>
+            
+        </div>
+        <button id="reset-button">
+            Reset
+        </button>
+        <div id="game-result-container">
+          <div id="game-result"></div>
+          <div id="press-info">Click to continue</div>
+        </div>
+    </body>
+</html>
